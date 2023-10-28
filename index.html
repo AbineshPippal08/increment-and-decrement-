@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countet web apk</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Jo-l9npfIMZ65fJjrlS0RQ7PNYJIWkZsSVicBNR1&s">
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+  
+        /* Firefox */
+        input[type="number"] {
+          -moz-appearance: textfield;
+        }
+      </style>
+
+        <script src="index.js" defer></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <!-- wrapper -->
+
+    <div 
+    class="w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-[#344151] box-border gap-10 space-y-2 "
+    >
+        <!-- heading -->
+        <div
+         class="capitalize font-medium text-[20px] bg-amber-200 p-3 rounded-sm  text-center"
+         >
+          Increment And Decrement
+         </div>
+
+        <!-- secondary wrapper -->
+
+        <div class="bg-white flex text-[25px] text-[#344151] rounded-sm gap-12 p-3 px-8 max-w-[850px]">
+
+            <!-- negative button -->
+            <button onclick="decrement()" class="border-[#bfbfbf] border-r-2 pr-5">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+
+            <div id="counter" class="font-bold">
+                0
+            </div>
+
+            <!-- positive button -->
+
+            <button  onclick="increment()" class="border-l-2 border-[#bfbfbf] pl-5">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+
+                    <!-- incresment by number -->
+
+        <div class="flex flex-col w-[100%] space-y-3"></div>
+        <div class="flex w-[100%]">
+            <input
+              type="number"
+              placeholder="Increment by Value"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='increment by Value'"
+              class="rounded-sm text-center  px-6 font-medium w-[70%] outline-none border-none caret-[#636c72] "
+            />
+            <button 
+            onclick="rangeIncrement()"
+            class="bg-red-500 rounded-sm text-center p-2 px-6 font-medium w-[30%]"
+            >
+                 Update
+                </button>
+                </div>
+
+                <!-- decrease by number -->
+
+                <div class="flex w-[100%]">
+                    <input
+                      type="number"
+                      placeholder="Decrement by Value"
+                      onfocus="this.placeholder=''"
+                      onblur="this.placeholder='Decrement by Value'"
+                      class="rounded-sm text-center p-2 px-6 font-medium w-[70%] outline-none border-none caret-[#636c72]"
+                    />
+                    <button 
+                        onclick="rangeDecrement()"
+                        class="bg-red-500 rounded-sm text-center p-2 px-6 font-medium w-[30%]"
+                        >
+                         Update
+                        </button>
+                        </div>
+
+                        <button 
+                        id="clr"
+                        class="bg-orange-500 text-yellow text-xl rounded-sm text-center p-2 px-6 font-medium"
+                        >
+                         clear
+                        </button>
+                    </div>
+                </div>
+              </div>
+
+   <script src="https://kit.fontawesome.com/58a810656e.js"
+    crossorigin="anonymous"
+    ></script>
+</body>
+</html>
